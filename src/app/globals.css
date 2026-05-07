@@ -24,3 +24,34 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 120px;
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.28);
+  color: white;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(34, 211, 238, 0.45) rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #2563eb, #22d3ee);
+  border-radius: 999px;
+}

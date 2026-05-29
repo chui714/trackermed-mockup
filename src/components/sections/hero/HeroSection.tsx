@@ -48,7 +48,7 @@ export default function HeroSection() {
             }}
             className="mt-7 max-w-4xl text-5xl font-semibold tracking-[-0.05em] text-white md:text-6xl xl:text-7xl"
           >
-            Revenue Cycle Intelligence for{" "}
+            Custom Solutions for{" "}
             <span className="bg-gradient-to-r from-blue-500 via-sky-400 to-cyan-300 bg-clip-text text-transparent">
               Modern Practices
             </span>

@@ -3,18 +3,21 @@
 export const footerContactCards = [
   {
     title: "Talk to an Expert",
-    value: "(877) 555-8273",
-    description: "Mon — Fri, 8AM — 8PM EST",
+    value: "(949) 385 - 2111",
+    href: "tel:+19493852111",
+    description: "Mon — Fri, 9AM — 4PM PT | Sat - Sun, Closed",
   },
   {
     title: "Email Us",
-    value: "hello@trackermed.com",
+    value: "chris@trackermed.com",
+    href: "mailto:chris@trackermed.com",
     description: "We’ll respond within 24 hours.",
   },
   {
-    title: "Secure & Compliant",
-    value: "HIPAA-conscious workflows",
-    description: "Built around privacy, clarity, and operational trust.",
+    title: "Secure Review",
+    value: "Free Billing Review",
+    href: "#contact",
+    description: "Share your billing concerns and we'll help identify next steps.",
   },
 ] as const;
 
@@ -24,6 +27,6 @@ export const footerLinks = [
   { label: "Results", href: "#results" },
   { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
-  { label: "Privacy Policy", href: "#privacy" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
   { label: "Terms of Service", href: "#terms" },
 ] as const;

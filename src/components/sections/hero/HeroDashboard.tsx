@@ -4,8 +4,10 @@
 
 import {
   Activity,
+  BadgeCheck,
   CircleDollarSign,
   FileCheck2,
+  RefreshCcw,
   Timer,
   TrendingDown,
   TrendingUp,
@@ -23,7 +25,7 @@ const metrics = [
   },
   {
     label: "Days in A/R",
-    value: "28",
+    value: "12",
     trend: "↓ 6 days",
     caption: "faster cycle",
     icon: Timer,
@@ -31,7 +33,7 @@ const metrics = [
   },
   {
     label: "Claims Submitted",
-    value: "4,782",
+    value: "30k+",
     trend: "↑ 18.6%",
     caption: "this month",
     icon: FileCheck2,
@@ -39,11 +41,27 @@ const metrics = [
   },
   {
     label: "Denial Rate",
-    value: "7.3%",
+    value: "2.8%",
     trend: "↓ 2.1%",
     caption: "improved",
     icon: TrendingDown,
     accent: "text-emerald-300",
+  },
+   {
+    label: "First Pass Rate",
+    value: "98%",
+    trend: "↑ 7.8%",
+    caption: "first-pass rate",
+    icon: BadgeCheck,
+    accent: "text-cyan-300",
+  },
+  {
+    label: "Tracker Improvement",
+    value: "7%",
+    trend: "reimbursement",
+    caption: "increase",
+    icon: RefreshCcw,
+    accent: "text-sky-300",
   },
 ];
 
@@ -65,7 +83,7 @@ export default function HeroDashboard() {
         delay: 0.22,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className="relative hidden w-full max-w-[620px] justify-self-end lg:block"
+      className="relative hidden w-full max-w-[720px] justify-self-end lg:block"
     >
       {/* Glow */}
       <div className="absolute -inset-6 rounded-[2rem] bg-gradient-to-br from-blue-500/20 via-cyan-400/10 to-transparent blur-3xl" />
@@ -100,14 +118,14 @@ export default function HeroDashboard() {
           </div>
 
           {/* Metric Cards */}
-          <div className="grid gap-3 sm:grid-cols-2">
+          <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
             {metrics.map((metric) => {
               const Icon = metric.icon;
 
               return (
                 <div
                   key={metric.label}
-                  className="rounded-2xl border border-white/10 bg-black/35 p-3.5"
+                  className="rounded-2xl border border-white/10 bg-black/35 p-3"
                 >
                   <div className="flex items-center justify-between">
                     <p className="text-xs text-slate-400">{metric.label}</p>

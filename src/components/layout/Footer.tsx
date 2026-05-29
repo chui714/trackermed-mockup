@@ -102,9 +102,12 @@ export default function Footer() {
                       {card.title}
                     </p>
 
-                    <p className="mt-2 text-sm font-semibold text-slate-200">
-                      {card.value}
-                    </p>
+                   <a
+                    href={card.href}
+                    className="mt-2 inline-flex text-sm font-semibold text-slate-200 transition hover:text-cyan-300"
+                  >
+                    {card.value}
+                  </a>
 
                     <p className="mt-2 text-xs leading-5 text-slate-400">
                       {card.description}

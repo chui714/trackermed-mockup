@@ -1,66 +1,160 @@
 // src/components/brand/TrackerMedLogo.tsx
 
+import styles from "./TrackerMedLogo.module.css";
+
 export default function TrackerMedLogo() {
   return (
-    <a href="#" className="flex items-center gap-3">
-      <div className="relative flex h-10 w-10 items-center justify-center">
-        <div className="absolute inset-0 rounded-xl bg-cyan-500/20 blur-md" />
+    <a
+      href="/"
+      aria-label="TrackerMed home"
+      className="group inline-flex items-center"
+    >
+      <svg
+        viewBox="0 0 340 100"
+        className="h-[78px] w-[230px] sm:w-[265px]"
+        fill="none"
+        aria-hidden="true"
+      >
+        <defs>
+          <filter
+            id="trackerLogoGoldGlow"
+            x="-20%"
+            y="-80%"
+            width="140%"
+            height="260%"
+          >
+            <feGaussianBlur stdDeviation="2.2" result="blur" />
+            <feMerge>
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
 
-        <svg
-          viewBox="0 0 48 48"
-          className="relative h-10 w-10"
-          fill="none"
-          aria-hidden="true"
+          <linearGradient
+            id="trackerLogoGold"
+            x1="0"
+            y1="42"
+            x2="340"
+            y2="42"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="#6f5a1d" stopOpacity="0.2" />
+            <stop offset="0.25" stopColor="#c7a84a" />
+            <stop offset="0.5" stopColor="#f1d27a" />
+            <stop offset="0.78" stopColor="#c7a84a" />
+            <stop offset="1" stopColor="#6f5a1d" stopOpacity="0.2" />
+          </linearGradient>
+        </defs>
+
+        {/* Wordmark */}
+        <text
+          x="18"
+          y="54"
+          fill="#f8fafc"
+          fontSize="46"
+          fontWeight="500"
+          letterSpacing="10"
+          style={{ fontFamily: "var(--font-cinzel), Georgia, serif" }}
         >
-          <path
-            d="M18 5h8v9h9v8h-9v9h-8v-9H9v-8h9V5Z"
-            stroke="url(#trackerGradient)"
-            strokeWidth="3"
-            strokeLinejoin="round"
-          />
+          TR
+        </text>
 
-          <path
-            d="M11 35c8-15 18-24 28-29"
-            stroke="url(#trackerGradient)"
-            strokeWidth="3"
-            strokeLinecap="round"
-          />
+        <text
+          x="172"
+          y="54"
+          fill="#f8fafc"
+          fontSize="46"
+          fontWeight="500"
+          letterSpacing="10"
+          style={{ fontFamily: "var(--font-cinzel), Georgia, serif" }}
+        >
+          CKER
+        </text>
 
-          <path
-            d="M14 31h6l3-7 5 13 4-8h5"
-            stroke="#22D3EE"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
+        {/* EKG line through the middle of the lettering */}
+        <path
+          className={styles.ekgLine}
+          d="
+            M 0 42
+            H 122
+            L 134 10
+            L 145 76
+            L 156 42
+            H 244
+            L 249 42
+            L 253 31
+            L 258 53
+            L 263 42
+            H 340
+          "
+          stroke="url(#trackerLogoGold)"
+          strokeWidth="2.2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          filter="url(#trackerLogoGoldGlow)"
+        />
 
-          <circle cx="39" cy="6" r="3" fill="#22D3EE" />
+        {/* traveling pulse */}
+        <path
+          className={styles.ekgPulse}
+          d="
+            M 0 42
+            H 122
+            L 134 10
+            L 145 76
+            L 156 42
+            H 242
+            L 247 42
+            L 251 31
+            L 256 53
+            L 261 42
+            H 340
+          "
+          stroke="#FDE68A"
+          strokeWidth="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
 
-          <defs>
-            <linearGradient
-              id="trackerGradient"
-              x1="8"
-              y1="6"
-              x2="42"
-              y2="40"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="#2563EB" />
-              <stop offset="0.55" stopColor="#0EA5E9" />
-              <stop offset="1" stopColor="#2DD4BF" />
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
+        {/* subtle gold base shadow */}
+        <path
+          className={styles.ekgShadow}
+          d="
+            M 0 44
+            H 122
+            L 134 12
+            L 145 78
+            L 156 44
+            H 242
+            L 247 42
+            L 251 31
+            L 256 53
+            L 261 42
+            H 340
+          "
+          stroke="#6f5a1d"
+          strokeWidth="0.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          opacity="0.45"
+        />
 
-      <div className="flex items-baseline tracking-tight">
-        <span className="text-[1.35rem] font-semibold text-white">
-          Tracker
-        </span>
-        <span className="bg-gradient-to-r from-sky-400 to-cyan-300 bg-clip-text text-[1.35rem] font-semibold text-transparent">
-          Med
-        </span>
-      </div>
+        {/* Subtitle */}
+        <text
+          x="170"
+          y="98"
+          fill="#cbd5e1"
+          fontSize="8.5"
+          fontWeight="600"
+          letterSpacing="3.2"
+          textAnchor="middle"
+          textLength="270"
+          lengthAdjust="spacing"
+          style={{ fontFamily: "var(--font-geist-sans), Arial, sans-serif" }}
+        >
+          MEDICAL BILLING | FINANCIAL CONSULTING
+        </text>
+      </svg>
     </a>
   );
 }

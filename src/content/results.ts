@@ -9,13 +9,13 @@ export const resultMetrics = [
   },
   {
     label: "Days in A/R",
-    value: "28",
+    value: "12",
     description: "Shorter reimbursement cycles and stronger cash visibility.",
     trend: "-6 days",
   },
   {
     label: "Denial Rate",
-    value: "7.3%",
+    value: "2.8%",
     description: "Reduced claim friction through structured follow-up.",
     trend: "-2.1%",
   },

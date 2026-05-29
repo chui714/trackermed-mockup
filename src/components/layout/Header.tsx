@@ -3,7 +3,7 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowRight, CircleUserRound, Menu, X } from "lucide-react";
+import { ArrowRight, Menu, X } from "lucide-react";
 import {
   AnimatePresence,
   motion,
@@ -17,20 +17,11 @@ import { headerActions, headerNavLinks } from "@/content/navigation";
 export default function Header() {
   const { scrollY } = useScroll();
 
-  const [hidden, setHidden] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    const previous = scrollY.getPrevious() ?? 0;
-
     setScrolled(latest > 24);
-
-    if (latest > previous && latest > 120 && !mobileOpen) {
-      setHidden(true);
-    } else {
-      setHidden(false);
-    }
   });
 
   const closeMobileMenu = () => {
@@ -40,10 +31,7 @@ export default function Header() {
   return (
     <motion.header
       initial={{ y: -24, opacity: 0 }}
-      animate={{
-        y: hidden ? -96 : 0,
-        opacity: hidden ? 0 : 1,
-      }}
+      animate={{ y: 0, opacity: 1 }}
       transition={{
         duration: 0.35,
         ease: [0.22, 1, 0.36, 1],
@@ -58,7 +46,11 @@ export default function Header() {
           duration: 0.3,
           ease: [0.22, 1, 0.36, 1],
         }}
-        className="mx-auto flex max-w-7xl items-center justify-between rounded-[1.7rem] border border-white/10 bg-black/70 px-5 py-4 shadow-2xl shadow-black/50 backdrop-blur-2xl"
+        className={`mx-auto flex max-w-7xl items-center justify-between rounded-[1.7rem] border px-5 py-4 backdrop-blur-2xl transition-colors duration-300 ${
+          scrolled
+            ? "border-white/10 bg-black/80 shadow-2xl shadow-black/60"
+            : "border-white/10 bg-black/70 shadow-2xl shadow-black/50"
+        }`}
       >
         <TrackerMedLogo />
 
@@ -75,16 +67,8 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Desktop Actions */}
+        {/* Desktop Action */}
         <div className="hidden items-center gap-3 md:flex">
-          <a
-            href={headerActions.portal.href}
-            className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-3 text-sm font-medium text-slate-100 transition duration-300 hover:bg-white hover:text-black"
-          >
-            <CircleUserRound className="h-4 w-4 text-cyan-300 transition group-hover:text-black" />
-            {headerActions.portal.label}
-          </a>
-
           <a
             href={headerActions.primary.href}
             className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-black shadow-lg shadow-white/10 transition duration-300 hover:bg-slate-200"
@@ -102,7 +86,11 @@ export default function Header() {
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
           aria-expanded={mobileOpen}
         >
-          {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          {mobileOpen ? (
+            <X className="h-5 w-5" />
+          ) : (
+            <Menu className="h-5 w-5" />
+          )}
         </button>
       </motion.div>
 
@@ -133,15 +121,6 @@ export default function Header() {
             </nav>
 
             <div className="mt-3 grid gap-2 border-t border-white/10 pt-3">
-              <a
-                href={headerActions.portal.href}
-                onClick={closeMobileMenu}
-                className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm font-medium text-slate-100 transition hover:bg-white hover:text-black"
-              >
-                <CircleUserRound className="h-4 w-4 text-cyan-300" />
-                {headerActions.portal.label}
-              </a>
-
               <a
                 href={headerActions.primary.href}
                 onClick={closeMobileMenu}

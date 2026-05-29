@@ -1,0 +1,68 @@
+.ekgLine {
+  stroke-dasharray: 520;
+  stroke-dashoffset: 520;
+  animation:
+    ekgDraw 1.7s ease-out forwards,
+    ekgGlowPulse 3.2s ease-in-out 1.9s infinite;
+}
+
+.ekgShadow {
+  stroke-dasharray: 520;
+  stroke-dashoffset: 520;
+  animation: ekgDraw 1.7s ease-out forwards;
+}
+
+.ekgPulse {
+  stroke-dasharray: 18 520;
+  stroke-dashoffset: 520;
+  opacity: 0;
+  animation:
+    ekgPulseReveal 0.01s linear 1.7s forwards,
+    ekgPulseTravel 2.6s linear 1.7s infinite;
+  filter: drop-shadow(0 0 8px rgba(244, 211, 107, 0.95));
+}
+
+@keyframes ekgDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes ekgGlowPulse {
+  0%,
+  100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 3px rgba(244, 211, 107, 0.45));
+  }
+
+  50% {
+    opacity: 0.94;
+    filter: drop-shadow(0 0 9px rgba(244, 211, 107, 0.9));
+  }
+}
+
+@keyframes ekgPulseReveal {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes ekgPulseTravel {
+  from {
+    stroke-dashoffset: 520;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ekgLine,
+  .ekgShadow,
+  .ekgPulse {
+    stroke-dashoffset: 0;
+    opacity: 1;
+    animation: none;
+  }
+}

@@ -38,20 +38,79 @@ section {
   color: white;
 }
 
-* {
+html {
   scrollbar-width: thin;
   scrollbar-color: rgba(34, 211, 238, 0.45) rgba(255, 255, 255, 0.05);
 }
 
-::-webkit-scrollbar {
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
   width: 10px;
 }
 
-::-webkit-scrollbar-track {
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.04);
 }
 
-::-webkit-scrollbar-thumb {
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
   background: linear-gradient(180deg, #2563eb, #22d3ee);
   border-radius: 999px;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.trusted-marquee {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 12%,
+    black 88%,
+    transparent
+  );
+}
+
+.trusted-marquee-track {
+  animation: trusted-marquee-scroll 34s linear infinite;
+}
+
+@keyframes trusted-marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.process-flow-line {
+  stroke-dasharray: 18 18;
+  animation: process-flow-dash 1.4s linear infinite;
+}
+
+@keyframes process-flow-dash {
+  from {
+    stroke-dashoffset: 36;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .process-flow-line {
+    animation: none;
+  }
 }

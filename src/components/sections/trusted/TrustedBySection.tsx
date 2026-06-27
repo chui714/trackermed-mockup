@@ -6,7 +6,7 @@ import Container from "@/components/ui/Container";
 import {
   featuredPartners,
   supportedPracticeTypes,
-} from "@/content/trusted-by";
+} from "@/content/trustedBy";
 
 export default function TrustedBySection() {
   const repeatedPracticeTypes = [

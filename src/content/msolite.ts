@@ -1,4 +1,4 @@
-// src/content/MSOLite.ts
+// src/content/msoLite.ts
 
 export const msoLiteContent = {
   eyebrow: "MSO Lite",

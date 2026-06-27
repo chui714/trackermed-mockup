@@ -1,4 +1,4 @@
-// src/content/trusted-by.ts
+// src/content/trustedBy.ts
 
 export const featuredPartners = [
   {

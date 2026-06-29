@@ -5,7 +5,6 @@ export const headerNavLinks = [
   {label: "MSO Lite", href: "/mso-lite"},
   { label: "Process", href: "/process" },
   { label: "Results", href: "/results" },
-  {label: "Testimonials", href: "/testimonials"},
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ] as const;

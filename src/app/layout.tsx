@@ -1,7 +1,10 @@
 // src/app/layout.tsx
 
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Cinzel } from "next/font/google";
+import { Cinzel, Geist, Geist_Mono } from "next/font/google";
+
+import SiteShell from "@/components/layout/SiteShell";
+
 import "./globals.css";
 
 const geistSans = Geist({
@@ -37,7 +40,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${cinzel.variable} h-full scroll-smooth antialiased`}
     >
       <body className="min-h-full bg-[#02040A] text-white">
-        {children}
+        <SiteShell>{children}</SiteShell>
       </body>
     </html>
   );

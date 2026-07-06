@@ -49,7 +49,4 @@ export const contactPageContent = {
     "Private billing conversation",
     "Clear next steps",
   ],
-
-  note:
-    "This form is a visual mockup for now. Final submission handling can be connected later through email, CRM, or a secure backend workflow.",
 } as const;

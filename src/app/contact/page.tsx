@@ -183,10 +183,6 @@ export default function ContactPage() {
                     </span>
                   ))}
                 </div>
-
-                <p className="mt-5 text-xs leading-5 text-slate-600">
-                  {contactPageContent.note}
-                </p>
               </div>
             </div>
           </div>

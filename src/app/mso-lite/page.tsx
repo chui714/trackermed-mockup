@@ -2,8 +2,9 @@
 
 import type { Metadata } from "next";
 
+import MSOLitePageContent from "@/components/pages/mso-lite/MSOLitePageContent";
 import StandardPageHero from "@/components/pages/standard/StandardPageHero";
-import MSOLiteSection from "@/components/sections/mso/MSOLiteSection";
+import { msoLitePageHero } from "@/content/msoLite";
 
 export const metadata: Metadata = {
   title: "MSO Lite | TrackerMed",
@@ -15,12 +16,12 @@ export default function MSOLitePage() {
   return (
     <>
       <StandardPageHero
-        eyebrow="MSO Lite"
-        title="Keep the guidance. Lose the MSO bloat."
-        description="MSO Lite is TrackerMed's right-sized support model for practices that need expert billing guidance, clearer feedback, and operational support without giving up control."
+        eyebrow={msoLitePageHero.eyebrow}
+        title={msoLitePageHero.title}
+        description={msoLitePageHero.description}
       />
 
-      <MSOLiteSection />
+      <MSOLitePageContent />
     </>
   );
 }

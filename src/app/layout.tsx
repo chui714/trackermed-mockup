@@ -1,7 +1,11 @@
 // src/app/layout.tsx
 
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Cinzel } from "next/font/google";
+import { Cinzel, Geist, Geist_Mono } from "next/font/google";
+import { siteConfig } from "@/lib/site";
+
+import SiteShell from "@/components/layout/SiteShell";
+
 import "./globals.css";
 
 const geistSans = Geist({
@@ -21,9 +25,24 @@ const cinzel = Cinzel({
 });
 
 export const metadata: Metadata = {
-  title: "TrackerMed | Revenue Cycle Management",
-  description:
-    "TrackerMed provides medical billing, claims tracking, denial management, and revenue cycle support for modern healthcare practices.",
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: siteConfig.title,
+    template: "%s | TrackerMed",
+  },
+  description: siteConfig.description,
+  applicationName: siteConfig.name,
+  openGraph: {
+    type: "website",
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    title: siteConfig.title,
+    description: siteConfig.description,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -37,7 +56,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${cinzel.variable} h-full scroll-smooth antialiased`}
     >
       <body className="min-h-full bg-[#02040A] text-white">
-        {children}
+        <SiteShell>{children}</SiteShell>
       </body>
     </html>
   );

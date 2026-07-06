@@ -9,24 +9,26 @@ export const footerContactCards = [
   },
   {
     title: "Email Us",
-    value: "chris@trackermed.com",
-    href: "mailto:chris@trackermed.com",
+    value: "info@trackermed.com",
+    href: "mailto:info@trackermed.com",
     description: "We’ll respond within 24 hours.",
   },
   {
     title: "Secure Review",
     value: "Free Billing Review",
-    href: "#contact",
-    description: "Share your billing concerns and we'll help identify next steps.",
+    href: "/contact",
+    description:
+      "Share your billing concerns and we'll help identify next steps.",
   },
 ] as const;
 
 export const footerLinks = [
-  { label: "Services", href: "#services" },
-  { label: "Process", href: "#process" },
-  { label: "Results", href: "#results" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
+  { label: "Services", href: "/services" },
+  { label: "MSO Lite", href: "/mso-lite" },
+  { label: "Process", href: "/process" },
+  { label: "Results", href: "/results" },
+  { label: "Reviews", href: "/results#reviews" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
   { label: "Privacy Policy", href: "/privacy-policy" },
-  { label: "Terms of Service", href: "#terms" },
 ] as const;

@@ -1,12 +1,14 @@
 // src/components/sections/trusted/TrustedBySection.tsx
 
+import styles from "./TrustedBySection.module.css";
+
 import { Building2, MapPin, ShieldCheck } from "lucide-react";
 
 import Container from "@/components/ui/Container";
 import {
   featuredPartners,
   supportedPracticeTypes,
-} from "@/content/trusted-by";
+} from "@/content/trustedBy";
 
 export default function TrustedBySection() {
   const repeatedPracticeTypes = [
@@ -73,8 +75,8 @@ export default function TrustedBySection() {
           </p>
         </Container>
 
-        <div className="trusted-marquee relative overflow-hidden">
-          <div className="trusted-marquee-track flex w-max items-center gap-4">
+        <div className={`${styles.marquee} relative overflow-hidden`}>
+          <div className={`${styles.marqueeTrack} flex w-max items-center gap-4`}>
             {repeatedPracticeTypes.map((item, index) => (
               <div
                 key={`${item}-${index}`}

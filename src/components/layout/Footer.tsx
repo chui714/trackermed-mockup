@@ -15,7 +15,7 @@ const contactIcons = [Phone, Mail, ShieldCheck];
 
 export default function Footer() {
   return (
-    <footer id="contact" className="relative border-t border-white/10">
+    <footer className="relative border-t border-white/10">
       <Container className="py-20">
         {/* CTA Panel */}
         <div className="relative overflow-hidden rounded-[2rem] border border-cyan-300/20 bg-white/[0.04] p-6 shadow-2xl shadow-black/40 backdrop-blur-2xl md:p-8 lg:p-10">
@@ -134,24 +134,6 @@ export default function Footer() {
               </a>
             ))}
           </nav>
-
-          <div className="flex items-center gap-3">
-            <a
-              href="#"
-              aria-label="LinkedIn"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-slate-400 transition hover:bg-white hover:text-black"
-            >
-              in
-            </a>
-
-            <a
-              href="#"
-              aria-label="Twitter"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-slate-400 transition hover:bg-white hover:text-black"
-            >
-              x
-            </a>
-          </div>
         </div>
 
         <div className="border-t border-white/10 pt-6 text-center text-xs text-slate-500">

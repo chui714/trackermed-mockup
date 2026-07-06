@@ -17,6 +17,8 @@ import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { processSteps } from "@/content/process";
 
+import styles from "./ProcessSection.module.css";
+
 const processIcons = [
   UserRoundCheck,
   FileText,
@@ -153,7 +155,7 @@ export default function ProcessSection() {
 
                 <path
                   d={flowPath}
-                  className="process-flow-line"
+                  className={styles.flowLine}
                   fill="none"
                   stroke="url(#process-line-gradient)"
                   strokeWidth="4"

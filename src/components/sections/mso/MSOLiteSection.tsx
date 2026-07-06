@@ -19,7 +19,7 @@ import {
   msoLiteContent,
   msoOrbitItems,
   traditionalMso,
-} from "@/content/msolite";
+} from "@/content/msoLite";
 
 const orbitIconMap = {
   sparkles: Sparkles,

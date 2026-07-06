@@ -2,6 +2,7 @@
 
 import type { Metadata } from "next";
 import { Cinzel, Geist, Geist_Mono } from "next/font/google";
+import { siteConfig } from "@/lib/site";
 
 import SiteShell from "@/components/layout/SiteShell";
 
@@ -24,9 +25,24 @@ const cinzel = Cinzel({
 });
 
 export const metadata: Metadata = {
-  title: "TrackerMed | Revenue Cycle Management",
-  description:
-    "TrackerMed provides medical billing, claims tracking, denial management, and revenue cycle support for modern healthcare practices.",
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: siteConfig.title,
+    template: "%s | TrackerMed",
+  },
+  description: siteConfig.description,
+  applicationName: siteConfig.name,
+  openGraph: {
+    type: "website",
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    title: siteConfig.title,
+    description: siteConfig.description,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

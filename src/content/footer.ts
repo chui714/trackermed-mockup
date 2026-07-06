@@ -9,8 +9,8 @@ export const footerContactCards = [
   },
   {
     title: "Email Us",
-    value: "chris@trackermed.com",
-    href: "mailto:chris@trackermed.com",
+    value: "info@trackermed.com",
+    href: "mailto:info@trackermed.com",
     description: "We’ll respond within 24 hours.",
   },
   {

@@ -18,8 +18,8 @@ export const contactPageContent = {
     },
     {
       label: "Email TrackerMed",
-      value: "chris@trackermed.com",
-      href: "mailto:chris@trackermed.com",
+      value: "info@trackermed.com",
+      href: "mailto:info@trackermed.com",
       description: "Send a message and receive a response within 24 hours.",
       icon: "mail",
     },

@@ -29,11 +29,6 @@ export const sitePages = [
     changeFrequency: "monthly",
   },
   {
-    path: "/process",
-    priority: 0.75,
-    changeFrequency: "monthly",
-  },
-  {
     path: "/results",
     priority: 0.75,
     changeFrequency: "monthly",

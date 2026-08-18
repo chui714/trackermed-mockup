@@ -29,7 +29,7 @@ export default function AboutPageContent() {
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">
-                {aboutIntro.eyebrow}
+                Why TrackerMed
               </p>
 
               <h2 className="mt-5 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
@@ -68,9 +68,9 @@ export default function AboutPageContent() {
                 </h3>
 
                 <p className="mt-4 text-sm leading-7 text-slate-400">
-                  TrackerMed should feel different from a generic billing vendor.
-                  The brand should communicate hands-on support, operational
-                  visibility, and practical guidance for healthcare practices.
+                  Billing touches everything in the practice. That's why TrackerMed focuses on the
+                  ancillary functions that support stronger financial performance. We know
+                  how to bring synergy to every financial function in the office. 
                 </p>
 
                 <div className="mt-8 grid gap-4">

@@ -2,66 +2,66 @@
 
 export const aboutPageHero = {
   eyebrow: "About TrackerMed",
-  title: "Medical billing support built around clarity and follow-through.",
+  title: "Thousands of options, only one clear choice.",
   description:
-    "TrackerMed helps healthcare practices improve visibility across claims, denials, follow-up, and revenue cycle operations with a practical, structured approach.",
+    "TrackerMed was founded on the principles of honest financial advisory. Any agency handling its client’s receipts has an obligation to transparent, customized service of the highest standard.",
 } as const;
 
 export const aboutIntro = {
-  eyebrow: "Practice-First Billing Support",
-  title: "Built for practices that need more than claim submission.",
+  title: "Built for practices that need more than just claim submission.",
   description:
-    "Medical billing is not only about sending claims. Practices need visibility into what is pending, what is denied, what needs follow-up, and where the workflow is creating friction. TrackerMed is positioned to support that clarity.",
+    "Sending a claim is usually just a few clicks. After that is where the difference is made, and where TrackerMed dominates.",
 } as const;
 
 export const aboutHighlights = [
   {
-    value: "Focused",
+    value: "Experience",
     label:
-      "Built specifically around billing clarity, claim follow-up, and practice revenue operations.",
+      "Tracker’s 15+ years in the industry have positioned us at the head of every new change in medicine. Every biller on your account is hand picked, trained, and comes with years of expertise.",
   },
   {
     value: "Transparent",
     label:
-      "Designed to give practices better visibility into what is submitted, pending, denied, and paid.",
+      "A full reporting suite, even outside of your native software, is always available and customized for your needs. Regular meetings to convey progress and understanding are a constant you can count on.",
   },
   {
-    value: "Reliable",
+    value: "On the cusp of technology",
     label:
-      "A structured process for reducing billing friction and supporting stronger financial outcomes.",
+      "Whether it is AI, new software platforms, or payer regulations, TrackerMed keeps you ahead of changes that may impact your business.",
   },
 ] as const;
 
 export const aboutBullets = [
-  "Medical billing support built around visibility, not confusion.",
-  "Clearer claim tracking from submission to reimbursement.",
-  "Denial management and follow-up handled with structure.",
-  "A premium partner experience for modern healthcare practices.",
+  "A finance-first approach that makes understanding your business our priority.",
+  "Robust back-end consulting to make each one of your claims a more effective revenue driver.",
+  "Reconciliation and denial management tactics that keep revenue velocity at a maximum.",
+  "Full consulting on practice strategy to help you remain cost effective.",
+  "Every result we put forth is custom tailored from your practice needs.",
 ] as const;
 
 export const aboutPrinciples = [
   {
-    title: "Clarity before complexity",
+    title: "Honest financial advisory",
     description:
-      "Practices should be able to understand where claims stand, what needs attention, and what actions are being taken.",
+      "TrackerMed was founded on transparent, customized service and an ethical code of performance for healthcare practices.",
   },
   {
-    title: "Support that fits the practice",
+    title: "White-glove practice service",
     description:
-      "TrackerMed’s positioning is not about forcing every practice into the same model. The focus is on practical support where it matters.",
+      "TrackerMed sets itself apart from an industry often dominated by low-effort billing teams and one-size-fits-all service.",
   },
   {
-    title: "Follow-through matters",
+    title: "Financial function synergy",
     description:
-      "Revenue cycle support is strongest when claims, denials, and open issues are tracked with consistency and accountability.",
+      "Billing touches everything in the practice. TrackerMed understands the ancillary functions that support stronger financial performance.",
   },
 ] as const;
 
 export const aboutAvoids = [
-  "Unclear claim status",
-  "Disconnected denial follow-up",
-  "Billing visibility gaps",
-  "Front-office issues creating downstream billing problems",
-  "Overbuilt support models that create unnecessary cost",
-  "Practices feeling unsure about what is happening in the revenue cycle",
+  "Low-effort billing activity without financial strategy",
+  "Poorly trained billing teams",
+  "Generic service that is not customized to the practice",
+  "Disconnected reporting and unclear progress",
+  "Revenue friction caused by weak reconciliation or denial tactics",
+  "Practices being left behind by payer, software, or technology changes",
 ] as const;

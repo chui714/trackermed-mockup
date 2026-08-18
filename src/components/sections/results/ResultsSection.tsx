@@ -14,7 +14,7 @@ import { motion } from "motion/react";
 
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { resultMetrics } from "@/content/results";
+import { resultMetrics, resultsContent } from "@/content/results";
 
 const metricIcons = [TrendingUp, Clock3, TrendingDown, CircleDollarSign];
 
@@ -28,9 +28,9 @@ export default function ResultsSection() {
           {/* Left Copy */}
           <div>
             <SectionHeading
-              eyebrow="Results That Matter"
-              title="Clear performance signals for stronger financial decisions."
-              description="TrackerMed turns billing activity into measurable insight, helping practices understand what is paid, what is pending, and where revenue is getting delayed."
+              eyebrow={resultsContent.eyebrow}
+              title={resultsContent.title}
+              description={resultsContent.description}
               align="left"
             />
 

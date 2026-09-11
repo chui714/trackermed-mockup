@@ -80,14 +80,6 @@ export default function HeroSection() {
             className="mt-9 flex flex-col gap-4 sm:flex-row"
           >
             <a
-              href="#contact"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-black shadow-xl shadow-white/10 transition duration-300 hover:bg-slate-200"
-            >
-              Free Billing Review
-              <ArrowRight className="h-4 w-4" />
-            </a>
-
-            <a
               href="#services"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-6 py-3.5 text-sm font-semibold text-white transition duration-300 hover:bg-white hover:text-black"
             >

@@ -151,9 +151,8 @@ export default function AboutPageContent() {
               </h2>
 
               <p className="mt-5 text-base leading-8 text-slate-400">
-                This page should reinforce why a practice would want a billing
-                partner that is organized, transparent, and focused on practical
-                revenue cycle improvement.
+                TrackerMed integrates itself as a dependable, full time member of your staff, 
+                maintaining a knowledge base specific to your practice&apos;s nuanced needs. 
               </p>
             </div>
 
@@ -185,14 +184,6 @@ export default function AboutPageContent() {
               Start with a free billing review and identify where your practice
               may need more visibility, follow-up, or support.
             </p>
-
-            <a
-              href="/contact"
-              className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-4 text-sm font-semibold text-black transition hover:bg-slate-200"
-            >
-              Request Free Billing Review
-              <ArrowRight className="h-4 w-4" />
-            </a>
           </div>
         </Container>
       </section>

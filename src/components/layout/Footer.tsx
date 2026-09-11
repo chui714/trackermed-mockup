@@ -74,14 +74,6 @@ export default function Footer() {
                 Partner with TrackerMed to improve billing visibility, reduce
                 claim friction, and strengthen your practice’s cash flow.
               </p>
-
-              <a
-                href="#contact"
-                className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-black shadow-xl shadow-white/10 transition duration-300 hover:bg-slate-200"
-              >
-                Free Billing Review
-                <ArrowRight className="h-4 w-4" />
-              </a>
             </div>
 
             {/* Contact Cards */}

@@ -180,14 +180,7 @@ export default function ServicesPageContent() {
               Start with a billing review. TrackerMed can help identify where
               the workflow needs the most attention.
             </p>
-
-            <a
-              href="/contact"
-              className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-4 text-sm font-semibold text-black transition hover:bg-slate-200"
-            >
-              Request Free Billing Review
-              <ArrowRight className="h-4 w-4" />
-            </a>
+            
           </div>
         </Container>
       </section>

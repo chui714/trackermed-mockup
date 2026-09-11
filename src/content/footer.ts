@@ -13,13 +13,6 @@ export const footerContactCards = [
     href: "mailto:info@trackermed.com",
     description: "We’ll respond within 24 hours.",
   },
-  {
-    title: "Secure Review",
-    value: "Free Billing Review",
-    href: "/contact",
-    description:
-      "Share your billing concerns and we'll help identify next steps.",
-  },
 ] as const;
 
 export const footerLinks = [

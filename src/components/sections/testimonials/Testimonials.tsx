@@ -13,7 +13,7 @@ export default function TestimonialsSection() {
   return (
     <section
       id="testimonials"
-      className="relative overflow-hidden border-t border-white/10 py-24 md:py-28"
+      className="relative overflow-hidden border-t border-white/10 py-24md:py-28"
     >
       <div className="pointer-events-none absolute left-1/2 top-20 h-[420px] w-[760px] -translate-x-1/2 rounded-full bg-cyan-400/10 blur-[140px]" />
       <div className="pointer-events-none absolute -right-32 bottom-0 h-[360px] w-[360px] rounded-full bg-blue-500/10 blur-[120px]" />
@@ -25,7 +25,7 @@ export default function TestimonialsSection() {
           description="Real feedback from practices and healthcare teams that have relied on TrackerMed for billing support, follow-through, and revenue cycle guidance."
         />
 
-        <div className="mt-16 grid gap-5 lg:grid-cols-3">
+        <div className="mt-16 grid gap-5 lg:grid-cols-2">
           {testimonials.map((testimonial, index) => (
             <motion.article
               key={testimonial.name}

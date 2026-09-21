@@ -19,4 +19,10 @@ export const testimonials = [
     name: "Thomas Lochner, MD",
     role: "Physician",
   },
+  {
+    quote:
+      "Billing was a huge sore point for myself and several others. I was seeing over 40 patients a day and was in a monthly deficit. Once we switched over, I was seeing less patients and taking more time off while mkaing over my base almost every month. Feel free to share the feedback!!",
+      name: "Yssra Soliman, MD FAAD",
+      role: "Physician"
+  },
 ] as const;
